@@ -109,4 +109,18 @@ public class Empleado {
     public void setCreatedAt(Date createdAt) {
         this.createdAt = createdAt;
     }
+
+    @Override
+    public String toString() {
+        return "Empleado{" +
+                "id=" + id +
+                ", email='" + email + '\'' +
+                ", profile=" + profile +
+                ", role=" + role +
+                ", enterprise=" + enterprise +
+                ", transacctions=" + transacctions +
+                ", updatedAt=" + updatedAt +
+                ", createdAt=" + createdAt +
+                '}';
+    }
 }
