@@ -130,4 +130,12 @@ public class Empleado {
                 ", createdAt=" + createdAt +
                 '}';
     }
+
+    public boolean isPresent() {
+        return false;
+    }
+
+    public Empleado get() {
+        return null;
+    }
 }

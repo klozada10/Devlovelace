@@ -21,8 +21,9 @@ public class EmpleadoControlador {
 
     @GetMapping("/BuscarEmpleados/{id}")
     public Optional<Empleado>buscarEmpleado(@PathVariable("id") String id){
-        return servicio.buscarEmpleado(id);
+        return Optional.ofNullable(servicio.buscarEmpleado(id));
     }
+
 
     @PutMapping("/ActualizarRol/{id}/{role}")
     public String actualizarRol(@PathVariable("id")String id,@PathVariable("role")String role){

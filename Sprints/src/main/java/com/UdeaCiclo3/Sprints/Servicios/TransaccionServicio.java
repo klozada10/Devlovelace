@@ -18,7 +18,7 @@ public class TransaccionServicio {
     public ArrayList<Transaccion>agregarPorEmpresa(Long id){
         return repositorio.findByEnterpriseId(id);
     }
-    public ArrayList<Transaccion>agregarPorEmpleado(Long id){
+    public boolean agregarPorEmpleado(String id){
         return repositorio.findByUserId(id);
     }
 
@@ -31,7 +31,15 @@ public class TransaccionServicio {
         }
     }
 
-    public Transaccion guardarTransaccion(Transaccion transaccion){
-        return repositorio.save(transaccion);
+    public boolean guardarTransaccion(Transaccion transaccion){
+        Transaccion mov=repositorio.save(transaccion);
+        if (repositorio.findByUserId(mov.getId()) == Boolean.parseBoolean(null)){
+            return true;
+        }else {
+            return false;
+        }
+    }
+    public ArrayList<Transaccion> idEmpresa(Long id){
+        return repositorio.findByEnterpriseId(id);
     }
 }

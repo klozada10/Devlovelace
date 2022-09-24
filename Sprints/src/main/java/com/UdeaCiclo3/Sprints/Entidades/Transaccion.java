@@ -1,8 +1,5 @@
 package com.UdeaCiclo3.Sprints.Entidades;
 
-import com.UdeaCiclo3.Sprints.Entidades.Empleado;
-import com.UdeaCiclo3.Sprints.Entidades.Empresa;
-
 
 import javax.persistence.*;
 import java.util.Date;

@@ -24,16 +24,16 @@ public class EmpleadoServicio {
         return repositorio.findById(id);
     }
 
-    public Optional<Empleado>buscarEmpleado(String id){
+    public Empleado buscarEmpleado(String id){
         return repositorio.findById(id);
     }
 
-    public String agregarEmpleado(Empleado empleado){
+    public boolean agregarEmpleado(Empleado empleado){
         if (!buscarEmpleado(empleado.getId()).isPresent()){
             repositorio.save(empleado);
-            return "Se agergo exitosamente el empleado";
+            return Boolean.parseBoolean("Se agergo exitosamente el empleado");
         }else {
-            return "No se registro el empleado";
+            return Boolean.parseBoolean("No se registro el empleado");
         }
     }
 

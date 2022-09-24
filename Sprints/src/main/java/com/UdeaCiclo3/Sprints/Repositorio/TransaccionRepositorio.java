@@ -10,4 +10,6 @@ import java.util.ArrayList;
 public interface TransaccionRepositorio extends JpaRepository<Transaccion,Long> {
     public abstract ArrayList<Transaccion>findByEnterpriseId(Long empresaId);
     public abstract ArrayList<Transaccion>findByUserId(Long userId);
+
+    boolean findByUserId(String id);
 }
